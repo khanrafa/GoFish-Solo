@@ -2,8 +2,9 @@
 package GoFish;
 
 /**
- *
- * @author rafae
+ * SYST 17796 Project code - Go Fish Card Game.
+ * Rafae Khan - 8/9/2021
+ * 
  */
 public class NewPlayer extends Player{
     String name;
