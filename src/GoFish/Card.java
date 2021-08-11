@@ -1,17 +1,15 @@
 /**
  * SYST 17796 Project code - Go Fish Card Game.
  * Rafae Khan - 8/9/2021
- * 
+ *
  */
 package GoFish;
-public abstract class Card 
-{
-   private String suit; //clubs, spades, diamonds, hearts
-   private int value;//1-13
 
+public abstract class Card {
 
-    
-    
+    private String suit; //clubs, spades, diamonds, hearts
+    private int value;//1-13
+
     /**
      * @return suit
      */
@@ -20,7 +18,7 @@ public abstract class Card
     }
 
     /**
-     * 
+     *
      * @param suit
      */
     public void setSuit(String suit) {
@@ -36,14 +34,13 @@ public abstract class Card
 
     /**
      * @param value
-    */
+     */
     public void setValue(int value) {
         this.value = value;
         // System.out.println(this.value);
     }
-    
-  
+
     @Override
     public abstract String toString();
-    
+
 }

@@ -4,100 +4,64 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 /**
- * SYST 17796 Project code - Go Fish Card Game.
- * Rafae Khan - 8/9/2021
- * 
+ * SYST 17796 Project code - Go Fish Card Game. Rafae Khan - 8/9/2021
+ *
  */
-public class GroupOfCards 
-{
-   
+public class GroupOfCards {
+
     //The group of cards, stored in an ArrayList
-    private ArrayList <GoFishCard> cards = new ArrayList();
-    
-    /**
-     * A method that will get the group of cards as an ArrayList
-     * @return the group of cards.
-     */
-    public ArrayList<GoFishCard> showCards()
-    {
+    private ArrayList<GoFishCard> cards = new ArrayList();
+
+    // Group of cards > ArrayList
+    public ArrayList<GoFishCard> showCards() {
         return cards;
     }
-    
-    public void shuffle()
-    {
+
+    //shuffle
+    public void shuffle() {
         Collections.shuffle(cards);
     }
 
-    /**
-     * @return the size of the group of cards
-     */
+    //size of the group of cards (verifying max)     
     public int getSize() {
         return cards.size();
     }
 
-    /**
-     * This method is to set the list of the hand card and
-     * the deck
-     * @param cards: total cards
-     */
+    // Set hand and deck cards
     public void setCards(ArrayList<GoFishCard> cards) {
         this.cards = cards;
     }
-    
-    /**
-     * This method is to add card from deck
-     * @param c: the card that is whether added or removed
-     */
+
+    //This method is to add card from deck
     public void addCard(GoFishCard c) {
         cards.add(c);
     }
-    
-    /**
-     * This method is to get card's position number 
-     * in ArrayList
-     * @param index: the card's position number
-     * @return the card's position number
-     */
+
+    //card's position number in ArrayList     
     public GoFishCard getCard(int index) {
         return cards.get(index);
     }
-    
-    /**
-     * This method is to remove the target card
-     * in ArrayList 
-     * @param index: the card's position number
-     * @return the card's position number
-     */
+
+    //remove the target card     
     public GoFishCard removeCard(int index) {
         return cards.remove(index);
     }
-    
-    /**
-     * This method is to remove the card that will 
-     * be removed from hand 
-     * @param c: card that is removed
-     * @return true for card removed
-     */
+
+    //remove the card from hand 
     public boolean removeCard(GoFishCard c) {
         return cards.remove(c);
     }
-    
- 
-    /**
-     * Display hard after each players turn 
-     */
+
+    //display hard after each players turn 
     public void displayCards() {
-        for (int i = 0;i < getSize();i++) {
+        for (int i = 0; i < getSize(); i++) {
             System.out.println(getCard(i));
         }
     }
-    
-    /**
-     * Empty hand checker
-     * @return true if empty or false if not
-     */
+
+    //empty hand checker
     public boolean isEmpty() {
         return cards.isEmpty();
     }
-        
+
 }
